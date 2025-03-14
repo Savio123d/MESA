@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDesk - Campanha Futurística</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset e estilos básicos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+    /* Header com imagem de fundo futurística e overlay */
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      /* Imagem de fundo representativa */
+      background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.5rem;
+    }
+    /* Seções */
+    section {
+      padding: 60px 10%;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #222;
+    }
+    /* Blocos de características e diferenciais */
+    .features, .differentials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .features div, .differentials div {
+      flex: 1 1 45%;
+      background: #f9f9f9;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .features div:hover, .differentials div:hover {
+      transform: translateY(-5px);
+    }
+    /* Estilo para Propósito e Exemplo */
+    #purpose p, #example p {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Galeria de Imagens */
+    #gallery {
+      background: #f4f4f4;
+      padding: 60px 10%;
+    }
+    #gallery .section-title {
+      color: #222;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+    /* Call to Action (CTA) */
+    .cta {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: #fff;
+      text-align: center;
+      padding: 60px 10%;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background: #fff;
+      color: #ff416c;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #ffe0e6;
+    }
+    #success-message {
+      margin-top: 20px;
+      color: #e0ffe0;
+      font-weight: bold;
+    }
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .features div, .differentials div {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      .gallery-container img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <h1>SmartDesk</h1>
+      <p>Mesa Inteligente para Escritórios Modernos</p>
+    </div>
+  </header>
+
+  <section id="features">
+    <h2 class="section-title">Características</h2>
+    <div class="features">
+      <div>
+        <h3>Altura Ajustável</h3>
+        <p>Transição entre posições sentado e em pé com um simples toque.</p>
+      </div>
+      <div>
+        <h3>Superfície Touchscreen</h3>
+        <p>Tela embutida para acessar e-mails, anotações e calendário sem precisar de um computador.</p>
+      </div>
+      <div>
+        <h3>Carregamento Sem Fio</h3>
+        <p>Área integrada para carregar dispositivos móveis sem cabos.</p>
+      </div>
+      <div>
+        <h3>Iluminação Ajustável</h3>
+        <p>LED integrado com ajustes de intensidade e temperatura para reduzir a fadiga ocular.</p>
+      </div>
+      <div style="flex: 1 1 100%; margin-top: 10px;">
+        <h3>Gestão Ergonômica</h3>
+        <p>Sensores que monitoram a postura e alertam o usuário sobre períodos prolongados sentado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="differentials">
+    <h2 class="section-title">Diferenciais</h2>
+    <div class="differentials">
+      <div>
+        <h3>Conectividade Total</h3>
+        <p>Integração com assistentes virtuais (Alexa, Google Assistant) e softwares de produtividade (Trello, Slack, Notion).</p>
+      </div>
+      <div>
+        <h3>Material Sustentável</h3>
+        <p>Feita com madeira reciclada e alumínio 100% reaproveitado.</p>
+      </div>
+      <div>
+        <h3>Inteligência Artificial</h3>
+        <p>Sugestões personalizadas de pausas e exercícios para aumentar a produtividade.</p>
+      </div>
+      <div>
+        <h3>Segurança de Dados</h3>
+        <p>Bloqueio biométrico para acesso seguro a arquivos e personalizações.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="purpose">
+    <h2 class="section-title">Propósito</h2>
+    <p>Facilitar a rotina de profissionais que trabalham em escritórios ou home office, promovendo bem-estar, produtividade e organização.</p>
+  </section>
+
+  <section id="example">
+    <h2 class="section-title">Exemplo Prático</h2>
+    <p>Imagine um designer gráfico que trabalha longas horas na frente do computador. Com a SmartDesk, ele pode alternar entre posições, carregar seu smartphone sem fio e usar a superfície touchscreen para visualizar anotações, mantendo o fluxo criativo e corrigindo a postura sempre que necessário.</p>
+  </section>
+  
+  <!-- Seção da Galeria com imagens de mesas inteligentes e futurísticas -->
+  <section id="gallery">
+    <h2 class="section-title">Galeria do Produto</h2>
+    <div class="gallery-container">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.j68lp4hcJ84AgRF2ZRTFlAHaEJ&pid=Api" alt="Mesa Interativa Futurística">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.6SZW5C0e4CH63LCp4biLiQHaE8&pid=Api" alt="Mesa com Realidade Aumentada">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.wfT1kARey5fTpFZ11RPotgHaE8&pid=Api" alt="Mesa com Assistente Virtual Integrado">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.xS6JBMo06hh-EuUI9kW-KwHaHZ&pid=Api" alt="Mesa com Carregamento Sem Fio e Conectividade">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.t8SuVyVgxinFfdenxdCnxAHaFs&pid=Api" alt="Mesa de Reunião Inteligente">
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <h2>Entre em Contato</h2>
+    <p>Para mais informações, preencha o formulário abaixo:</p>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+      <input type="email" id="email" name="email" placeholder="Seu Email" required>
+      <textarea id="message" name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="success-message" style="display: none;">
+      Obrigado por entrar em contato!
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SmartDesk. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Simulação de envio de formulário
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('success-message').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
